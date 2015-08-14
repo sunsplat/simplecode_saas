@@ -1,2 +1,3 @@
 Building a Rails app with Rob Dey's Codermanual lesson
-http://courses.codermanual.com/
+Subscription-based web application
+http://codermanual.com/
