@@ -7,15 +7,19 @@ class ContactsController < ApplicationController
         @contact = Contact.new(contact_params)
         
         if @contact.save
-            redirect_to new_contact_path, notice: "Message sent succssfully."
+            flash[:success] = 'Message sent.'
+            redirect_to new_contact_path #redirects to new_contact page when saving contact
         else
-            redirect_to new_contact_path, notice: "Message failed."
+            flash[:danger] = 'Message failed.'
+            redirect_to new_contact_path
         end
         
+   
     end
-    
+
     private
         def contact_params
             params.require(:contact).permit(:name, :email, :comments)
         end
+     
 end
