@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
-  resources :users do
-    resources :profile
+  resources :users do #allows every user to have their own profile
+    resources :profile #nested profile for every user
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
