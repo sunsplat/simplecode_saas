@@ -11,7 +11,7 @@
                     <% if current_user.profile %>
                     <!-- show profile edit links -->
                     
-                        <%= link_to "Edit your profile", "#", class: 'btn btn-default btn-large btn-block' %>
+                        <%= link_to "Edit your profile", edit_user_profile_path(current_user), class: 'btn btn-default btn-large btn-block' %>
                         <%= link_to "View your profile", user_path(current_user), class: 'btn btn-default btn-large btn-block' %>
                     <% else %>
                         <p>Create your profile so that home-owners can find you!</p>
