@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-
+  before_action :authenticate_user! #before_action is rails, but :authenticate_user! is using Devise
     def new
         # form where a user can fill out their own profile
         @user = User.find(params[:user_id]) # tells us who is logged in
@@ -23,6 +23,16 @@ class ProfilesController < ApplicationController
       @profile = @user.profile
     end
     
+    def update
+      @user = User.find( params[:user_id] )
+      @profile = @user.profile
+      if @profile.update_attributes(profile_params)
+        flash[:success] = "Profile Updated!"
+        redirect_to user_path(params[:user_id])
+      else
+        render action: :edit 
+      end
+    end
     
     private
     
