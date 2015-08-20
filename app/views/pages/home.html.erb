@@ -14,8 +14,9 @@
                         <%= link_to "Edit your profile", "#", class: 'btn btn-default btn-large btn-block' %>
                         <%= link_to "View your profile", user_path(current_user), class: 'btn btn-default btn-large btn-block' %>
                     <% else %>
+                        <p>Create your profile so that home-owners can find you!</p>
                     <!-- show profile create links -->
-                        <%= link_to "Create your profile!", new_user_profile_path(current_user), class: 'btn btn-default btn-large btn-block' %>
+                        <%= link_to "Create your profile", new_user_profile_path(current_user), class: 'btn btn-default btn-large btn-block' %>
                     <% end %>
             </div>
         </div>
