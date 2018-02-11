@@ -47,7 +47,7 @@ gem 'stripe', '1.16.1'
 gem 'figaro', '1.0.0'
 
 # Use paperclip for image uploads
-gem 'paperclip', '4.2.1'
+gem 'paperclip', '5.2.0'
 
 # Use to autoprefix the css for all browsers
 gem 'autoprefixer-rails'
